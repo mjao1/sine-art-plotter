@@ -35,7 +35,7 @@ function drawImage(image) {
       let x_index = Math.round(x)
       let pos_x = x * scale;
       let pixel = 255 - image[y][x_index]
-      sinusFactor = lerp(sinusFactor, x * pixel / 255, 0.06)
+      sinusFactor = lerp(sinusFactor, x * pixel / 255, 0.01)
       let sinus_change = Math.sin(sinusFactor * frq_multiplier) * pixel / 300
       t.goTo([pos_x, pos_y + sinus_change * amp_multiplier]);
     }
